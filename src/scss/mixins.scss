@@ -1,0 +1,35 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container() {
+  width: 92%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+@mixin btn() {
+  display: inline-block;
+  padding: 18px 42px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: top;
+  text-align: center;
+  color: $name-345477;
+  background-color: $name-9addfc;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+

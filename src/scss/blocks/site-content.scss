@@ -1,0 +1,15 @@
+.img-block {
+  position: relative;
+  width: 22px;
+  height: 22px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 15px;
+    @include sprite($quotes);
+  }
+}
+
+//quotes- название картинки

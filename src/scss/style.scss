@@ -1,0 +1,20 @@
+@import "normalize";                                    // закоментировать если не нужен
+
+//$fa-font-path: "../fonts/font-awesome";                 // закоментировать если не нужен
+//@import "node_modules/font-awesome/scss/font-awesome";  // закоментировать если не нужен
+
+//@import "custom.scss";                                 // закоментировать если не нужен
+//@import "node_modules/bootstrap/scss/bootstrap";       // закоментировать если не нужен
+
+@import "variables.scss";
+@import "mixins.scss";
+
+@import "sprite.scss";
+
+@import "fonts.scss";
+
+@import "blocks/scaffolding.scss";
+@import "blocks/site-header.scss";
+
+@import "blocks/site-content.scss";
+@import "blocks/site-footer.scss";
