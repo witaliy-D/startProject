@@ -22,7 +22,7 @@ var svgmin = require("gulp-svgmin");
 var pngquant = require('imagemin-pngquant');
 var webstream = require('webpack-stream');
 var responsive = require('gulp-responsive-images');
-
+var webpack = require('webpack');
 
 
 gulp.task("html", function() {
@@ -66,13 +66,11 @@ gulp.task("scripts", function() {
   .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest("dist/js"))
   .pipe(server.stream());
-});                                //cdn
+});
 
 gulp.task("webstream", function() {
   return gulp.src("src/js/app.js")
-  .pipe(webstream({
-    config: require('./webpack.config.js')
-  }))
+  .pipe(webstream(require('./webpack.config.js'), webpack))
   .pipe(gulp.dest("dist/js"))
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
