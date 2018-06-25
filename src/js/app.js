@@ -1,8 +1,6 @@
-import jQuery from 'jquery';
-window.$ = window.jQuery = jQuery
+svg4everybody();    // fix
 
 //import "bootstrap";
-
 
 import main from './main';
 

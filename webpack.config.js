@@ -1,8 +1,8 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   output: {
-    filename: "script.js",
+    filename: 'script.js',
   },
   module: {
     rules: [
@@ -20,12 +20,13 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      jquery: "jquery",
-      "window.jQuery": "jquery",
-      "window.$": "jquery",
-      Popper: ["popper.js", "default"],
+      $: 'jquery',
+      jQuery: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery',
+      'window.$': 'jquery',
+      Popper: ['popper.js', 'default'],
+      svg4everybody: 'svg4everybody',
     })
   ]
 };
