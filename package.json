@@ -9,6 +9,8 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.24.4",
     "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
@@ -28,6 +30,7 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.1",
     "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.9.0",
     "imagemin-pngquant": "^5.1.0",
     "merge-stream": "^1.0.1",
@@ -41,6 +44,8 @@
     "jquery": "^3.3.1",
     "node-normalize-scss": "^8.0.0",
     "popper.js": "^1.14.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "svg4everybody": "^2.1.9"
   },
   "scripts": {

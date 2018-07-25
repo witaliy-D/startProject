@@ -1,9 +1,21 @@
-const webpack = require('webpack');
+const webpack = require('webpack'),
+      path = require('path');
 
 module.exports = {
-  output: {
-    filename: 'script.js',
+
+  context: path.resolve(__dirname, 'src'),
+
+  entry: {
+        app: [
+            "./js/app.js"
+        ],
   },
+
+  output: {
+    filename: 'script.min.js',
+    path: path.resolve(__dirname, "dist/js"),
+  },
+
   module: {
     rules: [
       {
@@ -12,12 +24,13 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           query: {
-            presets: ['env']
+            presets: ['env', 'react', 'stage-0']
           }
         }
       }
     ]
   },
+
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',

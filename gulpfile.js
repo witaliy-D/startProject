@@ -81,10 +81,8 @@ gulp.task('scripts', function() {
 
 gulp.task('webStream', function() {
   return gulp.src('src/js/app.js')
+  .pipe(plumber())
   .pipe(webstream(require('./webpack.config.js'), webpack))
-  .pipe(gulp.dest('dist/js'))
-  .pipe(uglify())
-  .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest('dist/js'))
   .pipe(server.stream());
 });
@@ -210,7 +208,7 @@ gulp.task('serve', function() {
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/*.html', ['html']);
   //gulp.watch('src/js/*.js', ['scripts']);
-  gulp.watch('src/js/*.js', ['webStream']);
+  gulp.watch('src/js/**/*.js', ['webStream']);
   gulp.watch(['src/img/**/*', '!src/img/symbols.svg', '!src/img/sprite.png'], ['imagesWatch']);
   gulp.watch('src/fonts/**/*', ['fonts']);
 });
